@@ -73,12 +73,24 @@
 " http://ciurana.eu/pastebin/ - these are the ##java channel default pastebin
 " sites:
 
-let g:PASTER_COMMAND         = 'curl'
-let g:PASTER_CONTROL         = '-isv'
-let g:PASTER_FIXED_ARGUMENTS = '-d "parentID=&paste=Send&remember=0&expiry=d"'
-let g:PASTER_FORMAT          = '-d "format=textFormat"'
-let g:PASTER_NICK            = '-d "poster=nickID"'
-let g:PASTER_PAYLOAD         = '-d "@-"'
+if ! exists(PASTER_COMMAND)
+    let PASTER_COMMAND         = 'curl'
+endif
+if ! exists(PASTER_CONTROL)
+    let PASTER_CONTROL         = '-isv'
+endif
+if ! exists(PASTER_FIXED_ARGUMENTS)
+    let PASTER_FIXED_ARGUMENTS = '-d "parentID=&paste=Send&remember=0&expiry=d"'
+endif
+if ! exists(PASTER_FORMAT)
+    let PASTER_FORMAT          = '-d "format=textFormat"'
+endif
+if ! exists(PASTER_NICK)
+    let PASTER_NICK            = '-d "poster=nickID"'
+endif
+if ! exists(PASTER_PAYLOAD)
+    let PASTER_PAYLOAD         = '-d "@-"'
+endif
 
 " PASTER_RESPONSE_FLAG is a regular expression used for identifying
 " which line in a list of output lines from the PASTER_COMMAND contains
@@ -95,10 +107,13 @@ let g:PASTER_PAYLOAD         = '-d "@-"'
 " PASTER_RESPONSE_FLAG must contain a regex that detects only the
 " second line.
 
-let g:PASTER_RESPONSE_FLAG   = "^Location"
+if ! exists(PASTER_RESPONSE_FLAG)
+    let PASTER_RESPONSE_FLAG   = "^Location"
+endif
 
                                 " vim-filetype   pastebin-format
-let g:PASTER_SYNTAX_OPTIONS  = {   'awk':         'awk',
+if ! exists(PASTER_SYNTAX_OPTIONS)
+    let PASTER_SYNTAX_OPTIONS  = {   'awk':         'awk',
                                  \ 'sh':          'bash',
                                  \ 'c':           'c',
                                  \ 'cpp':         'cpp',
@@ -111,9 +126,14 @@ let g:PASTER_SYNTAX_OPTIONS  = {   'awk':         'awk',
                                  \ 'ruby':        'ruby',
                                  \
                                  \ 'default':     'text' }
+endif
 
-let g:PASTER_TEXT_AREA       = 'code2'
-let g:PASTER_URI             = 'http://eugeneciurana.com/pastebin/'
+if ! exists(PASTER_TEXT_AREA)
+    let g:PASTER_TEXT_AREA       = 'code2'
+endif
+if ! exists(PASTER_URI)
+    let PASTER_URI             = 'http://eugeneciurana.com/pastebin/'
+endif
 
 " The ParseLocationFrom() function is system dependent because every
 " pastebin returns this information in a sliglhtly different format
