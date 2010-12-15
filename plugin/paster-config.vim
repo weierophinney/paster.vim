@@ -73,22 +73,22 @@
 " http://ciurana.eu/pastebin/ - these are the ##java channel default pastebin
 " sites:
 
-if ! exists(PASTER_COMMAND)
+if !exists("PASTER_COMMAND")
     let PASTER_COMMAND         = 'curl'
 endif
-if ! exists(PASTER_CONTROL)
+if !exists("PASTER_CONTROL")
     let PASTER_CONTROL         = '-isv'
 endif
-if ! exists(PASTER_FIXED_ARGUMENTS)
+if !exists("PASTER_FIXED_ARGUMENTS")
     let PASTER_FIXED_ARGUMENTS = '-d "parentID=&paste=Send&remember=0&expiry=d"'
 endif
-if ! exists(PASTER_FORMAT)
+if !exists("PASTER_FORMAT")
     let PASTER_FORMAT          = '-d "format=textFormat"'
 endif
-if ! exists(PASTER_NICK)
+if !exists("PASTER_NICK")
     let PASTER_NICK            = '-d "poster=nickID"'
 endif
-if ! exists(PASTER_PAYLOAD)
+if !exists("PASTER_PAYLOAD")
     let PASTER_PAYLOAD         = '-d "@-"'
 endif
 
@@ -107,12 +107,12 @@ endif
 " PASTER_RESPONSE_FLAG must contain a regex that detects only the
 " second line.
 
-if ! exists(PASTER_RESPONSE_FLAG)
+if !exists("PASTER_RESPONSE_FLAG")
     let PASTER_RESPONSE_FLAG   = "^Location"
 endif
 
                                 " vim-filetype   pastebin-format
-if ! exists(PASTER_SYNTAX_OPTIONS)
+if !exists("PASTER_SYNTAX_OPTIONS")
     let PASTER_SYNTAX_OPTIONS  = {   'awk':         'awk',
                                  \ 'sh':          'bash',
                                  \ 'c':           'c',
@@ -128,10 +128,10 @@ if ! exists(PASTER_SYNTAX_OPTIONS)
                                  \ 'default':     'text' }
 endif
 
-if ! exists(PASTER_TEXT_AREA)
+if !exists("PASTER_TEXT_AREA")
     let g:PASTER_TEXT_AREA       = 'code2'
 endif
-if ! exists(PASTER_URI)
+if !exists("PASTER_URI")
     let PASTER_URI             = 'http://eugeneciurana.com/pastebin/'
 endif
 
