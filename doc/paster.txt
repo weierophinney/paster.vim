@@ -71,19 +71,19 @@ etc.
 
 CONSTANT              DEFAULT VALUE              DESCRIPTION
 --------              -------------              -----------
-PASTE_COMMAND         curl                       The command, usually
+PASTER_COMMAND         curl                       The command, usually
                                                  /usr/bin/curl.
 
-PASTE_CONTROL         -isv                       Default control arguments
+PASTER_CONTROL         -isv                       Default control arguments
                                                  for PASTE_COMMAND.
 
-PASTE_FIXED_ARGUMENTS ""                         Empty; used for passing 
+PASTER_FIXED_ARGUMENTS ""                         Empty; used for passing 
                                                  command line arguments too
                                                  PASTE_COMMAND that won't
                                                  change in between
                                                  invocations.
 
-PASTE_FORMAT          -d "format=textFormat"     The variable that the
+PASTER_FORMAT          -d "format=textFormat"     The variable that the
                                                  specific pastebin uses for
                                                  specifying the text syntax
                                                  highlighting text.
@@ -92,7 +92,7 @@ PASTE_FORMAT          -d "format=textFormat"     The variable that the
                                                  substituted with a value
                                                  from PASTE_SYNTAX_OPTIONS. 
 
-PASTE_NICK            -d "poster=nickID"         The variable holding an
+PASTER_NICK            -d "poster=nickID"         The variable holding an
                                                  identification string for
                                                  the poster; in IRC, this is
                                                  usually a nick.
@@ -105,26 +105,26 @@ PASTE_NICK            -d "poster=nickID"         The variable holding an
                                                  :let g:nickID is supported
                                                  in .vimrc.
 
-PASTE_PAYLOAD         -d "@-"                    The URL-encoded payload as
+PASTER_PAYLOAD         -d "@-"                    The URL-encoded payload as
                                                  expected by the PASTE_COMMAND
 
-PASTE_RESPONSE_FLAG   "^Location"                A marker to identify which
+PASTER_RESPONSE_FLAG   "^Location"                A marker to identify which
                                                  string contains the post's
                                                  URI in the response.  See
                                                  the source code for details.
 
-PASTE_SYNTAX_OPTIONS  dictionary                 A dictionary with a cross
+PASTER_SYNTAX_OPTIONS  dictionary                 A dictionary with a cross
                                                  reference of vim filetype
                                                  values and the token that
                                                  the pastebin uses for
                                                  specifying the syntax hilite
                                                  for that filetype.
 
-PASTE_TEXT_AREA       code2                      The HTML form element name
+PASTER_TEXT_AREA       code2                      The HTML form element name
                                                  that holds the text being
                                                  pasted.
 
-PASTE_URI             http://ciurana.eu/pastebin The pastebin URI to use for
+PASTER_URI             http://ciurana.eu/pastebin The pastebin URI to use for
                                                  posting requests.
 
 PASTER_BROWSER_COMMAND                           Invoke an external browser with
