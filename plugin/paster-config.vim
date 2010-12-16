@@ -149,9 +149,11 @@ endif
 " The subcomponent that copies the contents to the GUI clipboard
 " expects the response string in that format.
 
-function! g:Paster_ParseLocationFrom(line)
-  return substitute(a:line, '[[:space:]\r\n]\+$', '', '')
-endfunction
+if !exists("*g:Paster_ParseLocationFrom")
+  function! g:Paster_ParseLocationFrom(line)
+    return substitute(a:line, '[[:space:]\r\n]\+$', '', '')
+  endfunction
+endif
 
 " *************** End default configuration ********************
 
@@ -670,4 +672,21 @@ endfunction
 " *************** End pastey.net configuration ************
 
 
-
+" *************** Begin pastebin.com configuration ***************
+" This is a sample configuration you may use in your vimrc. Note that this
+" version will paste to the subdomain 'weierophinney.pastebin.com'; simply
+" remove the 'g:PASTER_FIXED_ARGUMENTS' setting, or replace it with your own.
+" let g:PASTER_FORMAT = '-d "paste_format=textFormat"'
+" let g:PASTER_TEXT_AREA = "paste_code"
+" let g:PASTER_URI = "http://pastebin.com/api_public.php"
+" let g:PASTER_FIXED_ARGUMENTS = '-d "paste_subdomain=weierophinney"'
+" let g:PASTER_RESPONSE_FLAG = "^http:"
+" function! g:Paster_ParseLocationFrom(line)
+"   let locator = "n/a"
+" 
+"   if (match(a:line, "^http:") > -1)
+"     let locator = a:line
+"   endif
+" 
+"   return "Location: ".locator
+" endfunction

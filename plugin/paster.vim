@@ -164,11 +164,12 @@ function! s:ExecutePaste(text)
       let location = g:Paster_ParseLocationFrom(line)
       echomsg location
 
-      let clipboardURL = split(location, " ")
-      call s:OpenInBrowser(clipboardURL[0x01])
-      call s:Paste2Clipboard(clipboardURL[0x01])
-
-      return
+      if match(location, " ")
+        let clipboardURL = split(location, " ")
+        call s:OpenInBrowser(clipboardURL[0x01])
+        call s:Paste2Clipboard(clipboardURL[0x01])
+        return
+      endif
     endif
   endfor
 
