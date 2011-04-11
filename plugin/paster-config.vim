@@ -30,12 +30,14 @@
 " SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 "
 "
-" CONTRIBUTOR           EMAIL                         IRC /NICK
-" ----------            -----                         ---------
-" Eugene Ciurana        http://ciurana.eu/contact     pr3d4t0r
-" Andrew Lombardi       http://www.mysticcoders.com   kinabalu
-" Matt Wozniski         mjw@drexel.edu                godlygeek
-" Will Gray             graywh@gmail.com              graywh
+" CONTRIBUTOR             EMAIL                            IRC /NICK
+" -----------             -----                            ---------
+" Eugene Ciurana          http://ciurana.eu/contact        pr3d4t0r
+" Andrew Lombardi         http://www.mysticcoders.com      kinabalu
+" Matt Wozniski           mjw@drexel.edu                   godlygeek
+" Will Gray               graywh@gmail.com                 graywh
+" Michael Jansen          http://michael-jansen.biz        n/a
+" Matthew Weier O'Phinney http://weierophinney.net/matthew weierophinney
 "
 " Special thanks to stepnem, iamjay_, jerbear, and other denizens of the
 " #vim channel (irc://irc.freenode.net/#vim)
@@ -673,13 +675,14 @@ endif
 
 
 " *************** Begin pastebin.com configuration ***************
-" This is a sample configuration you may use in your vimrc. Note that this
-" version will paste to the subdomain 'weierophinney.pastebin.com'; simply
-" remove the 'g:PASTER_FIXED_ARGUMENTS' setting, or replace it with your own.
-" let g:PASTER_FORMAT = '-d "paste_format=textFormat"'
-" let g:PASTER_TEXT_AREA = "paste_code"
-" let g:PASTER_URI = "http://pastebin.com/api_public.php"
-" let g:PASTER_FIXED_ARGUMENTS = '-d "paste_subdomain=weierophinney"'
+" This is a sample configuration you may use in your vimrc. Pastebin.com now
+" requires a valid API key; register with pastebin.com to obtain your API key.
+" Override the g:PASTER_FIXED_ARGUMENTS option to substitute your API key as the
+" 'api_dev_code' option.
+" let g:PASTER_FORMAT = '-d "api_paste_format=textFormat"'
+" let g:PASTER_TEXT_AREA = "api_paste_code"
+" let g:PASTER_URI = "http://pastebin.com/api/api_post.php"
+" let g:PASTER_FIXED_ARGUMENTS = '-d "api_dev_code=XXXXX&api_option=paste"'
 " let g:PASTER_RESPONSE_FLAG = "^http:"
 " function! g:Paster_ParseLocationFrom(line)
 "   let locator = "n/a"

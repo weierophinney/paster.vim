@@ -28,19 +28,27 @@
 " SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 "
 "
-" CONTRIBUTOR           EMAIL                         IRC /NICK
-" ----------            -----                         ---------
-" Eugene Ciurana        http://ciurana.eu/contact     pr3d4t0r
-" Andrew Lombardi       http://www.mysticcoders.com   kinabalu
-" Matt Wozniski         mjw@drexel.edu                godlygeek
-" Will Gray             graywh@gmail.com              graywh
-" Michael Jansen        http://michael-jansen.biz     n/a
+" CONTRIBUTOR             EMAIL                            IRC /NICK
+" -----------             -----                            ---------
+" Eugene Ciurana          http://ciurana.eu/contact        pr3d4t0r
+" Andrew Lombardi         http://www.mysticcoders.com      kinabalu
+" Matt Wozniski           mjw@drexel.edu                   godlygeek
+" Will Gray               graywh@gmail.com                 graywh
+" Michael Jansen          http://michael-jansen.biz        n/a
+" Matthew Weier O'Phinney http://weierophinney.net/matthew weierophinney
 "
 " Special thanks to stepnem, iamjay_, jerbear, and other denizens of the
 " #vim channel (irc://irc.freenode.net/#vim)
 "
 " Version history:
 " ----------------
+" 20110411              1.4  Updated pastebin support to v2 API.
+"
+" 20101216              1.3  Added pastebin.com support. Moved configuration
+"                            into a separate vim script, and modified to use vim 
+"                            globals, allowing for configuration via vimrc.
+"                            Added documentation file.
+"
 " 20091011              1.2  Option to open a web browser after the paste
 "                            is posted to the pastebin site.  See the
 "                            paster-config.vim file for examples.  Set the
